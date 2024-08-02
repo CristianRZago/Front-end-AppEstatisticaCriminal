@@ -8,15 +8,17 @@ class Zona
 
  double _Raio;
 
-  double _Area;
+ double _IndiceFurto;
 
-  Zona(this._Id, this._LatitudeCentral, this._LongitudeCentral, this._Raio,
-      this._Area);
 
-  double get Area => _Area;
 
-  set Area(double value) {
-    _Area = value;
+
+  Zona(this._Id, this._LatitudeCentral, this._LongitudeCentral, this._Raio, this._IndiceFurto);
+
+  double get IndiceFurto => _IndiceFurto;
+
+  set IndiceFurto(double value) {
+    _IndiceFurto = value;
   }
 
   double get Raio => _Raio;

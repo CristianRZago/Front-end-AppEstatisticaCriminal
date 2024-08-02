@@ -25,14 +25,14 @@ class _TelaprincipalState extends State<Telaprincipal> {
     List<Zona> zonas = [];
 
     try {
-      String url = "https://192.168.0.108:33644/Zona";
+      String url = "https://192.168.0.108:33644/IndFurto";
       http.Response response = await http.get(Uri.parse(url));
 
 
       var dadosJson = json.decode(response.body);
 
       for(var zona in dadosJson){
-        Zona p = Zona(zona["id"],zona["latitudeCentral"],zona["longitudeCentral"],zona["raio"],zona["area"]);
+        Zona p = Zona(zona["id"],zona["latitudeCentral"],zona["longitudeCentral"],zona["raio"],zona["indiceFurto"]);
 
         zonas.add(p);
       }
