@@ -1,5 +1,8 @@
 class Zona
 {
+
+  Zona(this._Id, this._LatitudeCentral, this._LongitudeCentral, this._Raio, this._IndiceFurto, this._Media, this._MediaMaxima);
+
   int _Id;
 
   double _LatitudeCentral;
@@ -10,10 +13,23 @@ class Zona
 
  double _IndiceFurto;
 
+ double _Media;
+
+ double _MediaMaxima;
 
 
+  double get MediaMaxima => _MediaMaxima;
 
-  Zona(this._Id, this._LatitudeCentral, this._LongitudeCentral, this._Raio, this._IndiceFurto);
+  set MediaMaxima(double value) {
+    _MediaMaxima = value;
+  }
+
+  double get Media => _Media;
+
+  set Media(double value) {
+    _Media = value;
+  }
+
 
   double get IndiceFurto => _IndiceFurto;
 
